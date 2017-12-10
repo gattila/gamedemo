@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/RaidersScene.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Prefabs/RaidersPlayer.tscn" type="PackedScene" id=2]
+
+[node name="StarRaiders" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+[node name="RaidersPlayer" parent="." instance=ExtResource( 2 )]
+
+position = Vector2( 504.074, 577.494 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Z" ]
+
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer"]
+
+polygon = PoolVector2Array( -11.1497, 634.56, 1046.73, 631.454, 1047.96, -9.42502, -11.1497, -11.3451 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation = 0.0
+invert_enable = false
+invert_border = 100.0
+
+

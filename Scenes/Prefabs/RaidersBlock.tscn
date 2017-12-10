@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/RaidersBlock.gd" type="Script" id=1]
+[ext_resource path="res://Images/block1.png" type="Texture" id=2]
+[ext_resource path="res://Images/block2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.1199, 12.0244 )
+
+[node name="RaidersBlock" type="StaticBody2D"]
+
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+
+[node name="AniSprite" type="AnimatedSprite" parent="."]
+
+position = Vector2( -0.953812, -0.770309 )
+scale = Vector2( 0.689493, 0.868815 )
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+position = Vector2( -1.01152, -0.813168 )
+scale = Vector2( 0.507634, 1.06114 )
+shape = SubResource( 2 )
+
+

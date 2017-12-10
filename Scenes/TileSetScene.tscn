@@ -1,0 +1,499 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/tileset.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.7874, 16.1458 )
+
+[node name="TileSetScene" type="Node2D"]
+
+[node name="Grass" type="Sprite" parent="."]
+
+position = Vector2( 22.3526, 18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 320, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree1" type="Sprite" parent="."]
+
+position = Vector2( 28.3526, 522.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 416, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Flower" type="Sprite" parent="."]
+
+position = Vector2( 30.3526, 626.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 320, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree6" type="Sprite" parent="."]
+
+position = Vector2( 59.3527, 585.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 480, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree5" type="Sprite" parent="."]
+
+position = Vector2( 60.3527, 552.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 448, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree4" type="Sprite" parent="."]
+
+position = Vector2( 59.3527, 521.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 416, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Grass2" type="Sprite" parent="."]
+
+position = Vector2( 62.3527, 626.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 320, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree2" type="Sprite" parent="."]
+
+position = Vector2( 28.3526, 553.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 448, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Tree3" type="Sprite" parent="."]
+
+position = Vector2( 29.3526, 586.002 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 480, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Stone" type="Sprite" parent="."]
+
+position = Vector2( 23.8228, 90.7741 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 480, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stone"]
+
+editor/display_folded = true
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stone/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 3.36005, -14.4958, 13.5866, -8.55012, 14.5379, 9.2869, 7.87876, 16.1839, -10.9096, 14.9947, -15.9039, 3.81688, -5.67738, -10.2149 )
+
+[node name="Well1" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 22.1159, 356.045 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 448, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Well1"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Well1/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 6.71729, -1.41595, 16.9585, -3.85434, 16.4708, 17.6034, -0.597839, 17.6034, 0.865204, 7.36218 )
+
+[node name="Fire1" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 22.851, 431.76 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 224, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fire1"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fire1/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 6.71729, -1.41595, 16.9585, -3.85434, 16.4708, 17.6034, -0.597839, 17.6034, 0.865204, 7.36218 )
+
+[node name="Well2" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 54.3025, 356.045 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 480, 448, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Well2"]
+
+editor/display_folded = true
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Well2/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -9.37598, -3.36664, -3.03619, 3.94849, -0.110138, 13.702, -16.2034, 13.702, -16.2034, -3.85434 )
+
+[node name="Fire2" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 54.1468, 433.936 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 224, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fire2"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fire2/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -9.21383, -7.47104, -0.162136, -3.38315, -0.110138, 13.702, -16.2034, 13.702, -16.2216, -10.9749 )
+
+[node name="Well3" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 22.6036, 388.232 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 480, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Well3"]
+
+editor/display_folded = true
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Well3/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -1.08548, -16.5339, 16.9585, -16.0462, 15.9832, 14.1896, 6.22964, 10.2882, 0.377563, 1.02243, -1.57315, -8.24341 )
+
+[node name="Fire3" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 23.3387, 463.947 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 256, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fire3"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fire3/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -1.45817, -10.0057, 16.9585, -16.0462, 15.9832, 14.1896, 4.08965, 13.3535, -10.2179, 10.4336, -1.45817, -2.99792 )
+
+[node name="Well4" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 53.8148, 388.719 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 480, 480, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Well4"]
+
+editor/display_folded = true
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Well4/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0.377563, -14.5832, -0.110107, 8.33755, -15.228, 15.6527, -16.2034, -14.5832 )
+
+[node name="Fire4" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 55.1441, 465.442 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 256, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fire4"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fire4/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -4.94058, -15.6179, 1.4832, 2.48547, -15.4522, 12.4131, -16.3282, -17.6618 )
+
+[node name="RockTop" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 22.6548, 129.317 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 416, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RockTop"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RockTop/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 2.27719, -9.22292, 8.10078, -2.10519, 11.9832, 17.9539, -9.37003, 17.9539, -3.22289, -4.69344 )
+
+[node name="RockTop2" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 22.056, 195.777 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 384, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RockTop2"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RockTop2/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -3.53935, -14.4149, 8.10078, -2.10519, 11.9832, 17.9539, -13.7179, 18.5158 )
+
+[node name="RockBottom" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 22.6548, 161.994 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 448, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RockBottom"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RockBottom/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 12.2503, -15.3596, 16.1936, 5.79106, 1.49571, 16.1871, -12.4852, 11.8853, -13.2022, -2.09563, -9.25887, -15.0011 )
+
+[node name="RockBottom2" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 23.8523, 226.658 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 416, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RockBottom2"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RockBottom2/StaticBody2D"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 12.2503, -15.3596, 16.1936, 5.79106, 1.49571, 16.1871, -8.92802, 4.39966, -14.3167, -15.9575 )
+
+[node name="StoneWall" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 23.3526, 55 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 288, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StoneWall"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StoneWall/StaticBody2D"]
+
+visible = false
+shape = SubResource( 1 )
+
+[node name="GolemTop" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 24.2328, 276.563 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 416, 448, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GolemTop"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemTop/StaticBody2D"]
+
+visible = false
+shape = SubResource( 1 )
+
+[node name="GolemBottom" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 24.673, 308.252 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 416, 480, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GolemBottom"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GolemBottom/StaticBody2D"]
+
+visible = false
+shape = SubResource( 1 )
+
+

@@ -1,0 +1,4 @@
+OpenGL ES 3.0 Renderer: AMD Radeon HD 7570M
+GLES3: max ubo light: 409
+GLES3: max ubo reflections: 455, ubo size: 144
+ARVR: Registered interface: Native mobile
