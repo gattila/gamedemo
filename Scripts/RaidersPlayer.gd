@@ -8,20 +8,25 @@ var fire_triggered = false
 var _current_direction = direction.IDLE
 var _last_fire = OS.get_unix_time()
 
+var _leftDirecttion = Vector2()
+var _rightDirection = Vector2()
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	_leftDirecttion = Vector2(-1*player_speed,0)
+	_rightDirection = Vector2(player_speed,0)
 	pass
 
 func _physics_process(delta):
 		
-	var d = Vector2()
-		
-	match _current_direction:
-		direction.LEFT: d.x=-1*player_speed*delta
-		direction.RIGHT: d.x=player_speed*delta
+	var d = Vector2(0,0)
 	
-	var c = move_and_collide(d)
+	match _current_direction:
+		direction.LEFT: d=_leftDirecttion
+		direction.RIGHT: d=_rightDirection
+	
+	var c = move_and_collide(d*delta)
 	
 	if fire_triggered: HandleFire()
 	
@@ -35,13 +40,14 @@ func HandleFire():
 		var node = firePrefTab.instance()
 		node.position.x = self.position.x
 		node.position.y = self.position.y
-		node.set_z(self.get_z()-1)
+		node.z_index=self.z_index-1
+		#node.set_z(self.get_z()-1)
 		self.get_owner().add_child(node)
 		
 		_last_fire=timeNow
 	pass
 
-func _input(event):
+func _unhandled_input(event):
 	
 	if event.is_action_pressed("ui_left"): _current_direction=direction.LEFT
 	if event.is_action_pressed("ui_right"): _current_direction=direction.RIGHT

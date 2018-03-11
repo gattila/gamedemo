@@ -8,14 +8,18 @@ var _enemySpeed = 40
 var _enemyDirection=_enemySpeed
 var _last_enemy_fire = OS.get_unix_time()
 
+var _lbFps = Label
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	
+	_lbFps=$lbFps
 	
 	var enemyPrefTab = load("res://Scenes/Prefabs/RaidersEnemy.tscn")
 	var blockPrefTab = load("res://Scenes/Prefabs/RaidersBlock.tscn")
 	    
+		
 	var n = 1
 	
 	for i in range(16):
@@ -27,6 +31,7 @@ func _ready():
 	   		n=n+1
 	   		self.add_child(node)	
 	
+		
 	for i in range(4):
 		for j in range(32):
 			for k in range(3):
@@ -36,12 +41,13 @@ func _ready():
 	   			node.set_name("Block"+str(n))
 	   			n=n+1
 	   			self.add_child(node)	
-		
-	
+
 	pass
 
 func _process(delta):
 	var timeNow = OS.get_unix_time()
+	_lbFps.text=str(Engine.get_frames_per_second())
+		
 	moveEnemies(delta)
 	
 	var dt = timeNow-_last_enemy_fire 
@@ -79,7 +85,9 @@ func enemyFire():
 		var node = firePrefTab.instance()
 		node.position.x = shooter.position.x
 		node.position.y = shooter.position.y
-		node.set_z(self.get_z()-1)
+		node.z_index=self.z_index-1
+
+		#node.set_z(self.get_z()-1)
 		shooter.get_parent().add_child(node)	    
 	pass
 

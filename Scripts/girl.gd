@@ -7,7 +7,7 @@ extends Spatial
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	$AnimationPlayer.get_animation("default").set_loop(true)
+	$AnimationPlayer.get_animation("default").set_loop(true)	
 	$AnimationPlayer.play("default")
 	pass
 

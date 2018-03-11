@@ -4,9 +4,13 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 
+var _lbFps = Label
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	
+	_lbFps=$lbFPS
 	
 	self.set_process(true)    
 	
@@ -23,6 +27,10 @@ func _ready():
 	
 	pass
 
+
+func _process(delta):
+	_lbFps.text=str(Engine.get_frames_per_second())
+	pass
 
 func _input(event):
 	if event is InputEventScreenTouch && event.pressed:

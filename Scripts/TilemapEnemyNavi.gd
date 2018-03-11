@@ -8,12 +8,16 @@ var path = []
 
 var cnt = 100
 
+var _lbFps = Label
+
 func _ready():
+	_lbFps = $lbFps
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
 
 func _process(delta):
+	_lbFps.text=str(Engine.get_frames_per_second())
 	if (path.size() > 1):
 		var to_walk = delta*SPEED
 		while(to_walk > 0 and path.size() >= 2):

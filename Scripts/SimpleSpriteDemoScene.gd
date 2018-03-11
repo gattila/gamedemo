@@ -6,7 +6,12 @@ extends Node2D
 
 var profDir=1
 
+var _lbFps = Label
+
 func _ready():
+	
+	_lbFps=$lbFps
+	
 	self.set_process(true)    
 	
 	var scene = load("res://Scenes/Prefabs/ball.tscn")
@@ -25,7 +30,7 @@ func _input(event):
 
 	
 func _process(delta):
-	
+	_lbFps.text=str(Engine.get_frames_per_second())
 	var prof = self.get_node("Professor")
 	prof.position.x+=delta*40*profDir
 	if prof.position.x>1000:

@@ -23,13 +23,13 @@ margin_bottom = 596.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 
-[node name="btSimpleSpriteDemo" type="Button" parent="."]
+[node name="btSimpleSpriteDemo" type="Button" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -40,7 +40,9 @@ margin_right = 755.0
 margin_bottom = 140.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -48,8 +50,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
+align = 1
 
-[node name="Label" type="Label" parent="btSimpleSpriteDemo"]
+[node name="Label" type="Label" parent="btSimpleSpriteDemo" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -62,6 +65,7 @@ margin_bottom = 39.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -71,7 +75,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnSvgSpritesDemo" type="Button" parent="."]
+[node name="btnSvgSpritesDemo" type="Button" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -83,7 +87,9 @@ margin_right = 754.0
 margin_bottom = 199.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -91,8 +97,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
+align = 1
 
-[node name="Label" type="Label" parent="btnSvgSpritesDemo"]
+[node name="Label" type="Label" parent="btnSvgSpritesDemo" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -105,6 +112,7 @@ margin_bottom = 39.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -114,7 +122,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btPhysics" type="Button" parent="."]
+[node name="btPhysics" type="Button" parent="." index="2"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -127,7 +135,9 @@ margin_right = 755.0
 margin_bottom = 258.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -135,8 +145,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
+align = 1
 
-[node name="Label" type="Label" parent="btPhysics"]
+[node name="Label" type="Label" parent="btPhysics" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -149,6 +160,7 @@ margin_bottom = 39.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -158,7 +170,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btTileMap" type="Button" parent="."]
+[node name="btTileMap" type="Button" parent="." index="3"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -171,7 +183,9 @@ margin_right = 755.0
 margin_bottom = 319.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -179,8 +193,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
+align = 1
 
-[node name="Label" type="Label" parent="btTileMap"]
+[node name="Label" type="Label" parent="btTileMap" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -193,6 +208,7 @@ margin_bottom = 39.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -202,7 +218,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btStarRaiders" type="Button" parent="."]
+[node name="btStarRaiders" type="Button" parent="." index="4"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -215,7 +231,9 @@ margin_right = 754.0
 margin_bottom = 381.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -223,8 +241,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
+align = 1
 
-[node name="Label" type="Label" parent="btStarRaiders"]
+[node name="Label" type="Label" parent="btStarRaiders" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -237,6 +256,7 @@ margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -246,7 +266,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btSimple3D" type="Button" parent="."]
+[node name="btSimple3D" type="Button" parent="." index="5"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -259,7 +279,9 @@ margin_right = 753.0
 margin_bottom = 444.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -267,8 +289,9 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
+align = 1
 
-[node name="Label" type="Label" parent="btSimple3D"]
+[node name="Label" type="Label" parent="btSimple3D" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -281,6 +304,7 @@ margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -290,7 +314,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="icecubes" type="Sprite" parent="."]
+[node name="icecubes" type="Sprite" parent="." index="6"]
 
 position = Vector2( 238.762, 212.056 )
 texture = ExtResource( 3 )
