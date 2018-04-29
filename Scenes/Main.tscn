@@ -11,7 +11,7 @@ use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
 
-[node name="Panel" type="Panel"]
+[node name="Panel" type="Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -220,7 +220,6 @@ max_lines_visible = -1
 
 [node name="btStarRaiders" type="Button" parent="." index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -266,9 +265,8 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btSimple3D" type="Button" parent="." index="5"]
+[node name="btShaderTest" type="Button" parent="." index="5"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -277,6 +275,53 @@ margin_left = 489.0
 margin_top = 393.0
 margin_right = 753.0
 margin_bottom = 444.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[node name="Label" type="Label" parent="btShaderTest" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 13.0
+margin_right = 251.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Shader test"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btSimple3D" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 489.0
+margin_top = 456.0
+margin_right = 753.0
+margin_bottom = 507.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -314,7 +359,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="icecubes" type="Sprite" parent="." index="6"]
+[node name="icecubes" type="Sprite" parent="." index="7"]
 
 position = Vector2( 238.762, 212.056 )
 texture = ExtResource( 3 )
@@ -328,6 +373,8 @@ texture = ExtResource( 3 )
 [connection signal="pressed" from="btTileMap" to="." method="_on_btTileMap_pressed"]
 
 [connection signal="pressed" from="btStarRaiders" to="." method="_on_btStarRaiders_pressed"]
+
+[connection signal="pressed" from="btShaderTest" to="." method="_on_btShaderTest_pressed"]
 
 [connection signal="pressed" from="btSimple3D" to="." method="_on_btSimple3D_pressed"]
 

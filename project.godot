@@ -19,7 +19,7 @@ config/icon="res://icon.png"
 window/size/resizable=false
 window/handheld/emulate_touchscreen=true
 window/stretch/mode="viewport"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [gdnative]
 
@@ -27,6 +27,8 @@ singletons=[  ]
 
 [rendering]
 
+quality/intended_usage/framebuffer_mode=3
+quality/intended_usage/framebuffer_allocation.mobile=0
 quality/2d/use_pixel_snap=true
 limits/buffers/canvas_polygon_buffer_size_kb=126
 limits/rendering/max_renderable_elements=65535

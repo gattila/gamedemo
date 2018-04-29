@@ -1,0 +1,178 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/PhysicsDemoScene.gd" type="Script" id=1]
+[ext_resource path="res://Images/icon.png" type="Texture" id=2]
+[ext_resource path="res://Images/block1.png" type="Texture" id=3]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+uniform sampler2D myTexture;
+uniform vec4 color: hint_color;
+
+void fragment()
+  {
+	COLOR=texture(myTexture,vec2(UV.x+(sin((UV.x*10.0)+TIME)/40.0),UV.y+(cos((UV.y*10.0)+TIME)/40.0)));
+  }"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/color = null
+shader_param/myTexture = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="Shader" id=3]
+
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+uniform vec4 color: hint_color;
+
+void fragment()
+  {	
+	COLOR.x=UV.x+cos(TIME)/4.0;
+	COLOR.y=UV.y+sin(TIME)/4.0;
+	COLOR.z=UV.y+sin(TIME+2.0)/4.0;
+  }"
+
+[sub_resource type="ShaderMaterial" id=4]
+
+render_priority = 0
+shader = SubResource( 3 )
+shader_param/color = null
+
+[sub_resource type="Shader" id=5]
+
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+uniform vec4 color: hint_color;
+
+// Converted from ShaderToy
+
+//map function returns a scalar value, given a 3D point.
+float map(vec3 p)
+{
+    //instancing:
+    //transform into continous coordinate system
+	vec3 trans = fract(p) * 2.0 -1.0;
+    
+  	//sphere map function is the length of the point minus the radius
+    //it's negative on the inside of the sphere and positive on the outside and 0 on the surface.
+    float radius = .01;
+ 	return length(trans) - radius;   
+}
+
+//ray is what we're marching along
+float trace(vec3 origin, vec3 ray)
+{
+    float t = 0.0;
+    for (int i =0; i <32; i++)
+    {
+        //origin + ray*t = where we are along the ray;
+        //we step along the ray in variable length segments, 
+     	vec3 pos = origin+ray*t;   
+        //converage on intersection, evaluate
+        float d=map(pos);
+        t += d * 0.3;	
+    }
+     return t;
+    
+}
+
+void fragment()
+  {
+  vec2 uv = UV.xy;
+	
+    //transform the cordinates to -1 to 1, instead of 0 to 1 so we can see
+    //bottom half of space
+    uv = uv * 2.0 - 1.0;
+    //correct the aspect ratio
+    
+    
+    //it needs to be normalized so it doesn't poke through the geometry when it's really close to the camera
+    //the z cordinate is 2.0, that's how you project the 2D coordinate into 3D space, 
+    //z is basically fov where 1 is 90 degrees.
+    vec3 ray = normalize(vec3(uv,2.0));
+    
+    //Y-axis rotation speed
+    float rot= TIME * .15;
+	
+	float f1 = cos(rot);
+	float f2 = sin(rot);
+	
+    //Sphere pos
+    vec3 origin = vec3(0.0,0.0, TIME);
+    
+    //trace from the origin along the ray to find the intersection from our map function
+    float t = trace(origin, ray);
+    //cool fogging effect, blur as you're further away
+    float fog = 1.0 / (1.0 + t * t * 0.12);
+    
+    vec3 fc = vec3(fog);
+    
+	COLOR = vec4(fc,1.0);
+}
+
+
+"
+
+[sub_resource type="ShaderMaterial" id=6]
+
+render_priority = 0
+shader = SubResource( 5 )
+shader_param/color = null
+
+[node name="SimpleShaderTest" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Test1" type="Sprite" parent="." index="0"]
+
+material = SubResource( 2 )
+position = Vector2( 214.319, 154.622 )
+scale = Vector2( 17.6882, 5.94298 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Test2" type="Sprite" parent="." index="1"]
+
+material = SubResource( 4 )
+position = Vector2( 467.845, 155.236 )
+scale = Vector2( 18.5477, 6.06574 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Test3" type="Sprite" parent="." index="2"]
+
+material = SubResource( 6 )
+position = Vector2( 742.859, 160.761 )
+scale = Vector2( 20.2666, 6.35222 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+[node name="lbFps" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 969.0
+margin_top = 15.0
+margin_right = 1009.0
+margin_bottom = 29.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

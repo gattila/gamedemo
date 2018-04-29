@@ -31,8 +31,13 @@ func _on_btStarRaiders_pressed():
 
 func _on_btSimple3D_pressed():
 	get_tree().change_scene("Scenes/Simple3D.tscn")
-	pass # replace with function body
+	pass 
 
 func _on_btnSvgSpritesDemo_pressed():
 	get_tree().change_scene("Scenes/SvgSprites.tscn")
-	pass # replace with function body
+	pass 
+
+
+func _on_btShaderTest_pressed():
+	get_tree().change_scene("Scenes/SimpleShaderTest.tscn")
+	pass 

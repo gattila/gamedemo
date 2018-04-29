@@ -4,12 +4,14 @@ extends Node
 # var a = 2
 # var b = "textvar"
 
+var _lbFps = Label
+
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	_lbFps=$lbFps
 	pass
 	
 func _input(event):
+	_lbFps.text=str(Engine.get_frames_per_second())
 	if event is InputEventScreenTouch && event.pressed:
 		get_tree().change_scene("Scenes/Main.tscn")
 	pass
