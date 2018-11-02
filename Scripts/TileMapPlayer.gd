@@ -33,9 +33,7 @@ func _physics_process(delta):
 		direction.DOWN: d.y=player_speed*delta
 	
 	var c = move_and_collide(d)
-	
-	if c!=null: print (str(c.collider))
-	
+		
 	if c!=null && (c.collider == exitObject || c.collider == enemyObject):
 		get_tree().change_scene("Scenes/Main.tscn")
 	

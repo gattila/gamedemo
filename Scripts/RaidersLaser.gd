@@ -13,7 +13,7 @@ func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 
-	self.position.y-=120*delta
+	self.position.y-=300*delta
 	if self.position.y<0:
 		self_destroy()	  
 	pass

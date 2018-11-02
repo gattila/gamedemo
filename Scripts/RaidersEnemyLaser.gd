@@ -10,7 +10,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	self.position.y+=180*delta
+	self.position.y+=300*delta
 	if self.position.y>600:
 		self_destroy()
 	pass

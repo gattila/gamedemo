@@ -11,46 +11,36 @@
 [ext_resource path="res://Materials/shoes.tres" type="Material" id=9]
 
 [node name="Girl" instance=ExtResource( 1 )]
-
 script = ExtResource( 2 )
 
-[node name="Csaj_Body" parent="Csaj"]
-
+[node name="Csaj_Body" parent="Csaj" index="0"]
 material/0 = ExtResource( 3 )
 _sections_unfolded = [ "material" ]
 
-[node name="Csaj_Long01" parent="Csaj"]
-
+[node name="Csaj_Long01" parent="Csaj" index="1"]
 material/0 = ExtResource( 4 )
 _sections_unfolded = [ "material" ]
 
-[node name="Csaj_High-poly" parent="Csaj"]
-
+[node name="Csaj_High-poly" parent="Csaj" index="2"]
 material/0 = ExtResource( 5 )
 _sections_unfolded = [ "material" ]
 
-[node name="Csaj_Eyebrow001" parent="Csaj"]
-
+[node name="Csaj_Eyebrow001" parent="Csaj" index="3"]
 material/0 = ExtResource( 6 )
 _sections_unfolded = [ "material" ]
 
-[node name="Csaj_Eyelashes02" parent="Csaj"]
-
+[node name="Csaj_Eyelashes02" parent="Csaj" index="4"]
 material/0 = ExtResource( 7 )
 _sections_unfolded = [ "material" ]
 
-[node name="Csaj_Female_casualsuit01" parent="Csaj"]
-
+[node name="Csaj_Female_casualsuit01" parent="Csaj" index="5"]
 material/0 = ExtResource( 8 )
 _sections_unfolded = [ "material" ]
 
-[node name="Csaj_Shoes05" parent="Csaj"]
-
+[node name="Csaj_Shoes05" parent="Csaj" index="6"]
 material/0 = ExtResource( 9 )
 _sections_unfolded = [ "material" ]
 
-[node name="AnimationPlayer" parent="."]
-
+[node name="AnimationPlayer" parent="." index="1"]
 _sections_unfolded = [ "Playback Options", "playback" ]
-
 

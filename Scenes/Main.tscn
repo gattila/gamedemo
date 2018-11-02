@@ -7,12 +7,14 @@
 [sub_resource type="DynamicFont" id=1]
 
 size = 18
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
 
-[node name="Panel" type="Panel" index="0"]
-
+[node name="Panel" type="Panel"]
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -28,8 +30,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 
-[node name="btSimpleSpriteDemo" type="Button" parent="." index="0"]
-
+[node name="btSimpleSpriteDemo" type="Button" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -52,8 +53,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btSimpleSpriteDemo" index="0"]
-
+[node name="Label" type="Label" parent="btSimpleSpriteDemo"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -75,8 +75,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnSvgSpritesDemo" type="Button" parent="." index="1"]
-
+[node name="btnSvgSpritesDemo" type="Button" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -99,8 +98,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btnSvgSpritesDemo" index="0"]
-
+[node name="Label" type="Label" parent="btnSvgSpritesDemo"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -122,8 +120,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btPhysics" type="Button" parent="." index="2"]
-
+[node name="btPhysics" type="Button" parent="."]
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
@@ -147,8 +144,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btPhysics" index="0"]
-
+[node name="Label" type="Label" parent="btPhysics"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -170,8 +166,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btTileMap" type="Button" parent="." index="3"]
-
+[node name="btTileMap" type="Button" parent="."]
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
@@ -195,8 +190,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btTileMap" index="0"]
-
+[node name="Label" type="Label" parent="btTileMap"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -218,8 +212,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btStarRaiders" type="Button" parent="." index="4"]
-
+[node name="btStarRaiders" type="Button" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -242,8 +235,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btStarRaiders" index="0"]
-
+[node name="Label" type="Label" parent="btStarRaiders"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -265,8 +257,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btShaderTest" type="Button" parent="." index="5"]
-
+[node name="btShaderTest" type="Button" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -289,8 +280,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btShaderTest" index="0"]
-
+[node name="Label" type="Label" parent="btShaderTest"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -312,8 +302,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btSimple3D" type="Button" parent="." index="6"]
-
+[node name="btSimple3D" type="Button" parent="."]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -336,8 +325,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Label" type="Label" parent="btSimple3D" index="0"]
-
+[node name="Label" type="Label" parent="btSimple3D"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -359,23 +347,14 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="icecubes" type="Sprite" parent="." index="7"]
-
+[node name="icecubes" type="Sprite" parent="."]
 position = Vector2( 238.762, 212.056 )
 texture = ExtResource( 3 )
 
 [connection signal="pressed" from="btSimpleSpriteDemo" to="." method="_on_btSimpleSpriteDemo_pressed"]
-
 [connection signal="pressed" from="btnSvgSpritesDemo" to="." method="_on_btnSvgSpritesDemo_pressed"]
-
 [connection signal="pressed" from="btPhysics" to="." method="_on_btPhysics_pressed"]
-
 [connection signal="pressed" from="btTileMap" to="." method="_on_btTileMap_pressed"]
-
 [connection signal="pressed" from="btStarRaiders" to="." method="_on_btStarRaiders_pressed"]
-
 [connection signal="pressed" from="btShaderTest" to="." method="_on_btShaderTest_pressed"]
-
 [connection signal="pressed" from="btSimple3D" to="." method="_on_btSimple3D_pressed"]
-
-

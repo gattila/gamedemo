@@ -4,9 +4,9 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 
-var _enemySpeed = 40
+var _enemySpeed = 60
 var _enemyDirection=_enemySpeed
-var _last_enemy_fire = OS.get_unix_time()
+var _last_enemy_fire = OS.get_ticks_msec()
 
 var _lbFps = Label
 
@@ -45,13 +45,14 @@ func _ready():
 	pass
 
 func _process(delta):
-	var timeNow = OS.get_unix_time()
+	var timeNow = OS.get_ticks_msec()
+		
 	_lbFps.text=str(Engine.get_frames_per_second())
 		
 	moveEnemies(delta)
 	
 	var dt = timeNow-_last_enemy_fire 
-	if dt>0:
+	if dt>300:		
 		enemyFire()
 		_last_enemy_fire=timeNow
 	pass
@@ -108,7 +109,7 @@ func moveEnemies(delta):
 	maxX+=16
 	maxY+=16
 			
-	
+		
 	var dx=_enemyDirection*delta
 	var dy=0
 	
@@ -127,6 +128,6 @@ func moveEnemies(delta):
 		if node.get_name().left(5)=="Enemy":
 			node.position.x+=dx
 			node.position.y+=dy
-	
+		
 
 

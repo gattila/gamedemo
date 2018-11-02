@@ -30,8 +30,6 @@ _sections_unfolded = [ "shader_param" ]
 code = "shader_type canvas_item;
 render_mode unshaded;
 
-uniform vec4 color: hint_color;
-
 void fragment()
   {	
 	COLOR.x=UV.x+cos(TIME)/4.0;
@@ -43,7 +41,6 @@ void fragment()
 
 render_priority = 0
 shader = SubResource( 3 )
-shader_param/color = null
 
 [sub_resource type="Shader" id=5]
 
