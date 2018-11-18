@@ -6,13 +6,15 @@ path="res://.import/ufo_eyes.svg-c8aaff7993e56941e46939c1b763ae01.stex"
 
 [deps]
 
-source_md5="a5ece9220cca92c4eea8e82706bc678f"
+source_file="res://Images/ufo_eyes.svg"
+dest_files=[ "res://.import/ufo_eyes.svg-c8aaff7993e56941e46939c1b763ae01.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -22,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

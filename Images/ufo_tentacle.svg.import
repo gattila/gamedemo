@@ -6,13 +6,15 @@ path="res://.import/ufo_tentacle.svg-037bba62607d1c7e01fefe546d6c898e.stex"
 
 [deps]
 
-source_md5="a7a965361225f32b6373964066c0ec59"
+source_file="res://Images/ufo_tentacle.svg"
+dest_files=[ "res://.import/ufo_tentacle.svg-037bba62607d1c7e01fefe546d6c898e.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -22,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

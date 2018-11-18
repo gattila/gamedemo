@@ -6,13 +6,15 @@ path="res://.import/block2.png-89077b0122e1aa43526a1a8d51d7e2d5.stex"
 
 [deps]
 
-source_md5="24709f3ba0f18dcbefeadfb145d65642"
+source_file="res://Images/block2.png"
+dest_files=[ "res://.import/block2.png-89077b0122e1aa43526a1a8d51d7e2d5.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -22,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

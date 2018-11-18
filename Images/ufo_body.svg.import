@@ -6,13 +6,15 @@ path="res://.import/ufo_body.svg-1833e68dc8ae527d04657fc89d72e9f3.stex"
 
 [deps]
 
-source_md5="57ed91110d86e04e43f94afbec7b91fa"
+source_file="res://Images/ufo_body.svg"
+dest_files=[ "res://.import/ufo_body.svg-1833e68dc8ae527d04657fc89d72e9f3.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -22,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -6,13 +6,15 @@ path="res://.import/FBI_walk_cycle_34.png-06437951b152666874dc8b5bfc0553e3.stex"
 
 [deps]
 
-source_md5="d86496e5f702b0bcec87da033bd73813"
+source_file="res://Images/Frames/FBI_walk_cycle_34.png"
+dest_files=[ "res://.import/FBI_walk_cycle_34.png-06437951b152666874dc8b5bfc0553e3.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -22,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

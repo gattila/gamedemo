@@ -6,13 +6,15 @@ path="res://.import/icecubes.png-4577a0678687d8c17524b87d42f49a35.stex"
 
 [deps]
 
-source_md5="4252294d195301db1ba918477a36b07d"
+source_file="res://Images/icecubes.png"
+dest_files=[ "res://.import/icecubes.png-4577a0678687d8c17524b87d42f49a35.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -20,8 +22,9 @@ flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
-process/premult_alpha=true
+process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

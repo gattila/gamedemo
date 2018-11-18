@@ -6,13 +6,15 @@ path="res://.import/tileset.png-38a728fce72929cd0f59b41e9740c369.stex"
 
 [deps]
 
-source_md5="506ac28daf8e47af3f412e6d84d780b8"
+source_file="res://Images/tileset.png"
+dest_files=[ "res://.import/tileset.png-38a728fce72929cd0f59b41e9740c369.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -22,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
