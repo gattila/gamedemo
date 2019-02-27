@@ -5,7 +5,7 @@ extends KinematicBody2D
 # var b = "textvar"
 
 
-var player_speed = 100
+var player_speed = 90
 var eventPos = Position2D
 
 enum direction { UP, DOWN, LEFT, RIGHT }

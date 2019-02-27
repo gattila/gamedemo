@@ -52,7 +52,7 @@ func _process(delta):
 		createEnemy()
 	
 	moveEnemies(delta)
-	n+=(delta/5)
+	n-=(delta/5)
 	
 	$Grid.get_surface_material(0).set_shader_param("dt",n);		
 	pass

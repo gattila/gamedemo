@@ -5,61 +5,25 @@
 
 [sub_resource type="PlaneMesh" id=1]
 
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-flip_faces = false
-size = Vector2( 2, 2 )
-subdivide_width = 0
-subdivide_depth = 0
 
 [node name="Simple3D" type="Spatial"]
 script = ExtResource( 1 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30625, 8.49932, -3.02481 )
-layers = 1
-light_color = Color( 1, 1, 1, 1 )
 light_energy = 8.77
 light_indirect_energy = 4.52
-light_negative = false
 light_specular = 1.0
-light_bake_mode = 1
-light_cull_mask = -1
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.15
-shadow_contact = 0.0
-shadow_reverse_cull_face = false
-editor_only = false
 omni_range = 20.2884
-omni_attenuation = 1.0
-omni_shadow_mode = 1
-omni_shadow_detail = 1
 
 [node name="Camera" type="Camera" parent="."]
-keep_aspect = 1
-cull_mask = 1048575
-environment = null
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
 current = true
 fov = 75.2
-size = 1.0
 near = 0.11
 far = 51.8
 
 [node name="Grid" type="MeshInstance" parent="."]
 transform = Transform( 6.29779, 0, 0, 0, 2.48693, 1.30273, 0, -0.0137544, 47.1618, 0.069118, -3.68947, -33.1977 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("")
 material/0 = ExtResource( 2 )

@@ -21,6 +21,10 @@ config/icon="res://icon.png"
 
 [display]
 
+window/size/resizable=false
+window/size/test_width=1024
+window/size/test_height=600
+window/dpi/allow_hidpi=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -30,5 +34,4 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
