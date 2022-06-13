@@ -18,41 +18,41 @@ func _ready():
 	
 	var enemyPrefTab = load("res://Scenes/Prefabs/RaidersEnemy.tscn")
 	var blockPrefTab = load("res://Scenes/Prefabs/RaidersBlock.tscn")
-	    
+		
 		
 	var n = 1
 	
 	for i in range(16):
 		for j in range(6):
-	   		var node = enemyPrefTab.instance()    
-	   		node.position.x=32+i*40
-	   		node.position.y=32+j*40
-	   		node.set_name("Enemy"+str(n))
-	   		n=n+1
-	   		self.add_child(node)	
+			var node = enemyPrefTab.instance()
+			node.position.x=32+i*40
+			node.position.y=32+j*40
+			node.set_name("Enemy"+str(n))
+			n=n+1
+			self.add_child(node)	
 	
 		
 	for i in range(4):
 		for j in range(32):
 			for k in range(3):
-	   			var node = blockPrefTab.instance()    
-	   			node.position.x=45+(i*250)+(j*6)
-	   			node.position.y=450+(k*26)
-	   			node.set_name("Block"+str(n))
-	   			n=n+1
-	   			self.add_child(node)	
+				var node = blockPrefTab.instance()    
+				node.position.x=45+(i*250)+(j*6)
+				node.position.y=450+(k*26)
+				node.set_name("Block"+str(n))
+				n=n+1
+				self.add_child(node)	
 
 	pass
 
 func _process(delta):
 	var timeNow = OS.get_ticks_msec()
-		
+	
 	_lbFps.text=str(Engine.get_frames_per_second())
-		
+	
 	moveEnemies(delta)
 	
 	var dt = timeNow-_last_enemy_fire 
-	if dt>300:		
+	if dt>300:
 		enemyFire()
 		_last_enemy_fire=timeNow
 	pass
@@ -78,8 +78,8 @@ func enemyFire():
 			
 		var k=kx[0]
 		for i in range(3):
-		  if abs(kx[i]-playerX)<abs(k-playerX):
-		     k=kx[i]
+			if abs(kx[i]-playerX)<abs(k-playerX):
+				k=kx[i]
 		
 		var shooter = lowestEnemies[k]
 		var firePrefTab = load("res://Scenes/Prefabs/RaidersEnemyLaser.tscn")
